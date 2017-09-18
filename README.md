@@ -2,6 +2,9 @@
 
 > A  music app
 
+## Documentation
+To check out live demo, please visit https://ivanwoo.github.io/apple-cider.
+
 ## Build Setup
 
 ``` bash
@@ -18,4 +21,11 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Todo
+1. music player.
+2. playlist.
+3. more music streaming api.
+
+## Acknowledgments
+
+> What Need Have I For This- What Need Have I For That- I Am Dancing At The Feet Of My Lord-All Is Bliss-All Is Bliss.
