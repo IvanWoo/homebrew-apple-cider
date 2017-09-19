@@ -3,7 +3,7 @@
         <div>
             <ul class="media-list row">
                 <li class="media row no-gutter" v-for="(album, index) in albums" :key="album.id">
-                    <div class="media-left col-lg-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-12 justify-content-center">
                         <img class="media-left media-object" v-bind:src="album.cover">
                     </div>
                     <div class="media-body col-lg-8">
@@ -68,7 +68,7 @@ export default {
         margin-left: -23px;
     }
     .media-object {
-        width: 100%;
+        max-width: 95%;
         padding: 10px;
         border-radius: 15px;
     }
