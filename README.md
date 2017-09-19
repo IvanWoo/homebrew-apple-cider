@@ -5,6 +5,12 @@
 ## Documentation
 To check out live demo, please visit https://ivanwoo.github.io/apple-cider.
 
+### Screenshots
+#### Desktop
+![desktop capture](https://github.com/IvanWoo/homebrew-apple-cider/blob/master/screenshots/desktop.png)
+#### Mobile Device
+![mobile capture](https://github.com/IvanWoo/homebrew-apple-cider/blob/master/screenshots/mobile%20device.png)
+
 ## Build Setup
 
 ``` bash
