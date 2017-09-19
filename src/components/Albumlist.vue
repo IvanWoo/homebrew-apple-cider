@@ -2,12 +2,16 @@
     <div class="Albumlist">
         <div>
             <ul class="media-list row">
-                <li class="media row no-gutter" v-for="album in albums" :key="album.id">
+                <li class="media row no-gutter" v-for="(album, index) in albums" :key="album.id">
                     <div class="media-left col-lg-4">
                         <img class="media-left media-object" v-bind:src="album.cover">
                     </div>
                     <div class="media-body col-lg-8">
-                        <album v-bind:album="album"></album>
+                        <div class="media-body">
+                            <h2 class="media-heading">{{ album.name }}</h2>
+                            <h3 class="">{{ album.artist.name }}</h3>
+                            <songlist v-bind:album_id="album_ids[index]"></songlist>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -17,18 +21,19 @@
 
 <script>
 import axios from 'axios'
-import Album from '@/components/Album'
+import songlist from '@/components/Songlist'
 
 export default {
     name: 'Albumlist',
     props: ['source'],
     components: {
-        'album': Album,
+        'songlist': songlist,
     },
     data () {
         return {
             albums: [],
             songs: [],
+            album_ids: [],
             album_id: ""
         }
     },
@@ -37,6 +42,12 @@ export default {
             axios.get('https://doubananimalclock.leanapp.cn/api/search/album/xiami?key=' + source)
                 .then(response => {
                     this.albums = response.data.albumList;
+
+                    let ids = this.albums.map(album => {
+                        return album.id
+                    });
+
+                    this.album_ids = ids;
                 });
         }
     },
