@@ -75,9 +75,15 @@ export default {
 
 <style scoped>
 
+td {
+    line-height: 55px;
+    min-height: 55px;
+    height: 55px;
+}
+
 audio {
     width: 100%;
-    height: 25px;
+    height: 100%;
 }
 
 </style>
