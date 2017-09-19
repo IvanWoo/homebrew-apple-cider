@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
-        <table class="table lead">
-            <thead class="hidden-md-down">
+        <table class="table table-sm">
+            <thead>
                 <tr>
                     <td></td>
                     <td class="col-lg-9 align-middle text-muted">Title</td>

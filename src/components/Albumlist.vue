@@ -3,15 +3,13 @@
         <div>
             <ul class="media-list row">
                 <li class="media row no-gutter" v-for="(album, index) in albums" :key="album.id">
-                    <div class="media-left col-lg-4">
+                    <div class="media-left col-lg-4 justify-content-center">
                         <img class="media-left media-object" v-bind:src="album.cover">
                     </div>
                     <div class="media-body col-lg-8">
-                        <div class="media-body">
-                            <h2 class="media-heading">{{ album.name }}</h2>
-                            <h3 class="">{{ album.artist.name }}</h3>
-                            <songlist v-bind:album_id="album_ids[index]"></songlist>
-                        </div>
+                        <h2 class="h3">{{ album.name }}</h2>
+                        <h3 class="h4">{{ album.artist.name }}</h3>
+                        <songlist v-bind:album_id="album_ids[index]"></songlist>
                     </div>
                 </li>
             </ul>
@@ -63,6 +61,12 @@ export default {
 </script>
 
 <style scoped>
+    h2, h3 {
+        padding-left: 15px;
+    }
+    .row {
+        margin-left: -23px;
+    }
     .media-object {
         width: 100%;
         padding: 10px;

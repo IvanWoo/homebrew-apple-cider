@@ -1,9 +1,9 @@
 <template>
     <div class="Keywords jumbotron jumbotron-fluid">
         <div class="container text-center">
-            <h1 class="display-1">
+            <h1>
                  林檎音楽(仮)
-                <p class="text-muted h3 py-3">最近好きなアルバムあるかい? </p>
+                <p class="lead text-muted py-3">最近好きなアルバムあるかい? </p>
             </h1>
             <div class="form-group">
                 <!-- <label for="keywords" class="h5">Search:</label> -->
@@ -30,14 +30,6 @@ export default {
 </script>
 
 <style scoped>
-
-input[type=text] {
-    font-size: 2.45rem;
-    padding-top: .4rem;
-    padding-bottom: .4rem;
-    /* background-color: #fafafa; */
-}
-
 
 </style>
 

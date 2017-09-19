@@ -1,5 +1,5 @@
 <template>
-  <div class="" id="app">
+  <div id="app">
     <Keywords v-on:keywordChanged="keywordChanged"></Keywords>
     <Albumlist v-bind:source="source"></Albumlist>
   </div>
