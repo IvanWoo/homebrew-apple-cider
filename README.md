@@ -7,9 +7,9 @@ To check out live demo, please visit https://ivanwoo.github.io/apple-cider.
 
 ### Screenshots
 #### Desktop
-![desktop capture](https://github.com/IvanWoo/homebrew-apple-cider/blob/master/screenshots/desktop.png)
+<img src="https://github.com/IvanWoo/homebrew-apple-cider/blob/master/screenshots/desktop.png" width="400">
 #### Mobile Device
-![mobile capture](https://github.com/IvanWoo/homebrew-apple-cider/blob/master/screenshots/mobile%20device.png)
+<img src="https://github.com/IvanWoo/homebrew-apple-cider/blob/master/screenshots/mobile%20device.png" width="400">
 
 ## Build Setup
 
