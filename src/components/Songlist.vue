@@ -10,12 +10,10 @@
             </thead>
             <tbody>
                 <tr v-for="(song, index) in songs" :key="song.id">
-                    <td class="align-middle text-muted">{{ index + 1}}</td>
+                    <td class="align-middle text-muted">{{ index + 1 }}</td>
                     <td class="col-sm-12 col-lg-8 align-middle">{{ song.name }}</td>
                     <td class="align-middle">
-                        <audio class="audioPlayer w-100 mw-100 align-middle" controls="" controlsList="nodownload" preload="none" :src=" songsUrl[index]" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                        </audio>
+                        <song v-bind:song_id="song.id"></song>
                     </td>
                 </tr>
             </tbody>
@@ -25,14 +23,17 @@
 
 <script>
 import axios from 'axios'
+import Song from '@/components/Song'
 
 export default {
     name: 'Songlist',
     props: ['album_id'],
+    components: {
+       'song': Song,
+    },
     data() {
         return {
             songs: [],
-            songsUrl: [],
         }
     },
     methods: {
@@ -40,24 +41,6 @@ export default {
             axios.get('https://doubananimalclock.leanapp.cn/api/get/album/xiami?id=' + album_id)
                 .then(response => {
                     this.songs = response.data.songList;
-
-                    let ids = this.songs.map(song => {
-                        return song.id
-                        });
-
-                    let urls = [];
-                    ids.forEach(function(id) {
-                        this.getSongUrl(id, urls);
-                    }, this);
-
-                    this.songsUrl = urls;
-                    
-                });
-        },
-        getSongUrl: function(song_id, urls) {
-            axios.get('https://doubananimalclock.leanapp.cn/api/get/song/xiami?id=' + song_id)
-                .then(response => {
-                    urls.push(response.data.url);
                 });
         }
     },
