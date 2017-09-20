@@ -3,10 +3,10 @@
         <div class="container-fluid">
             <ul class="media-list row">
                 <li class="media row col-sm-12 col-lg-6" v-for="(album, index) in albums" :key="album.id">
-                    <div class="col-sm-12 col-md-4">
+                    <div class="col-sm-12 col-md-4 d-lg-none">
                         <img class="media-left media-object mw-100" v-bind:src="album.cover">
                     </div>
-                    <div class="media-body col-md-8">
+                    <div class="media-body col-md-12">
                         <h2 class="h3">{{ album.name }}</h2>
                         <h3 class="h4">{{ album.artist.name }}</h3>
                         <songlist v-bind:album_id="album_ids[index]"></songlist>
@@ -32,7 +32,6 @@ export default {
             albums: [],
             songs: [],
             album_ids: [],
-            album_id: ""
         }
     },
     methods: {
