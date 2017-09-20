@@ -4,7 +4,7 @@
         Your browser does not support the audio element.
     </audio> -->
     <div v-if="show">
-        <a-player narrow :music="music"></a-player>
+        <a-player mutex narrow :music="music"></a-player>
     </div>
 
 
