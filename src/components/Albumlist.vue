@@ -1,12 +1,12 @@
 <template>
     <div class="Albumlist">
-        <div>
+        <div class="container-fluid">
             <ul class="media-list row">
                 <li class="media row no-gutter" v-for="(album, index) in albums" :key="album.id">
-                    <div class="col-lg-4 col-sm-12 justify-content-center">
+                    <div class="col-sm-12 col-md-4">
                         <img class="media-left media-object" v-bind:src="album.cover">
                     </div>
-                    <div class="media-body col-lg-8">
+                    <div class="media-body col-md-8">
                         <h2 class="h3">{{ album.name }}</h2>
                         <h3 class="h4">{{ album.artist.name }}</h3>
                         <songlist v-bind:album_id="album_ids[index]"></songlist>
@@ -68,7 +68,7 @@ export default {
         margin-left: -23px;
     }
     .media-object {
-        max-width: 95%;
+        max-width: 100%;
         padding: 10px;
         border-radius: 15px;
     }
