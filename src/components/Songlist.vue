@@ -1,17 +1,17 @@
 <template>
-    <div class="container-fluid">
+    <div class="container">
         <table class="table table-sm">
             <thead>
                 <tr>
                     <td></td>
-                    <td class="col-lg-9 align-middle text-muted">Title</td>
+                    <td class="col-sm-12 col-lg-8 align-middle text-muted">Title</td>
                     <td class="col-lg align-middle text-muted">Streaming</td>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(song, index) in songs" :key="song.id">
                     <td class="align-middle text-muted">{{ index + 1}}</td>
-                    <td class="align-middle">{{ song.name }}</td>
+                    <td class="col-sm-12 col-lg-8 align-middle">{{ song.name }}</td>
                     <td class="align-middle">
                         <audio class="audioPlayer w-100 mw-100 align-middle" controls="" controlsList="nodownload" preload="none" :src=" songsUrl[index]" type="audio/mpeg">
                         Your browser does not support the audio element.
@@ -73,11 +73,4 @@ export default {
 </script>
 
 <style scoped>
-
-td {
-    line-height: 55px;
-    min-height: 55px;
-    height: 55px;
-}
-
 </style>

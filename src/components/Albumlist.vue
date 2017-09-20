@@ -2,9 +2,9 @@
     <div class="Albumlist">
         <div class="container-fluid">
             <ul class="media-list row">
-                <li class="media row no-gutter" v-for="(album, index) in albums" :key="album.id">
+                <li class="media row col-sm-12 col-lg-6" v-for="(album, index) in albums" :key="album.id">
                     <div class="col-sm-12 col-md-4">
-                        <img class="media-left media-object" v-bind:src="album.cover">
+                        <img class="media-left media-object mw-100" v-bind:src="album.cover">
                     </div>
                     <div class="media-body col-md-8">
                         <h2 class="h3">{{ album.name }}</h2>
@@ -64,9 +64,7 @@ export default {
     h2, h3 {
         padding-left: 15px;
     }
-    .row {
-        margin-left: -23px;
-    }
+    
     .media-object {
         max-width: 100%;
         padding: 10px;
@@ -76,10 +74,6 @@ export default {
     .media {
         border-top: 1px solid lightgrey;
         padding-top: 20px;
-    }
-
-    .no-gutter {
-        margin-right: 0;
     }
 
 </style>
