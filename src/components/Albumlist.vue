@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <ul class="media-list row">
                 <li class="media row col-sm-12 col-lg-6" v-for="(album, index) in albums" :key="album.id">
-                    <div class="col-sm-12 col-md-4 d-lg-none">
+                    <div class="col-sm-12 col-md-4">
                         <img class="media-left media-object mw-100" v-bind:src="album.cover">
                     </div>
                     <div class="media-body col-md-12">

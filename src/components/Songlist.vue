@@ -1,11 +1,11 @@
 <template>
-    <div class="container">
+    <div class="">
         <table class="table table-sm">
             <thead>
                 <tr>
                     <td></td>
                     <td class="col-sm-12 col-lg-8 align-middle text-muted">Title</td>
-                    <td class="col-lg align-middle text-muted">Streaming</td>
+                    <td class="col-lg align-middle text-muted">Play</td>
                 </tr>
             </thead>
             <tbody>

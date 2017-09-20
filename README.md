@@ -30,7 +30,7 @@ npm run build --report
 
 ## Todo
 1. ~~music player.~~
-2. playlist.
+2. ~~playlist.~~
 3. more music streaming api.
 
 ## Acknowledgments

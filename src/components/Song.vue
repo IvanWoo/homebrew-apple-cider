@@ -4,7 +4,9 @@
         Your browser does not support the audio element.
     </audio> -->
     <div v-if="show">
-        <a-player mutex narrow :music="music"></a-player>
+        <!-- <a-player mutex narrow :music="music" v-on:click="addToPlaylist(music)"></a-player> -->
+        <span v-on:click="reloadPlaylist(music)">▶️</span>
+        <!-- <span v-on:click="reload">⟳</span> -->
     </div>
 
 
@@ -38,7 +40,15 @@ export default {
                     this.music.author = response.data.artist.id;
                     this.show = true;
                 });
-        }
+        },
+        reloadPlaylist: function(newSong) {
+            // this.$store.commit('reload');
+            // this.$store.commit('addToPlaylist', newSong);
+            this.$store.dispatch('reloadPlaylist', newSong);
+        },
+        // reload: function() {
+        //     this.$store.commit('reload');
+        // }
     },
     created: function() {
         this.getSongUrl(this.song_id);
