@@ -30,6 +30,8 @@ export default {
 </script>
 
 <style scoped>
-
+.text-center {
+    margin-top: 30px;
+}
 </style>
 
