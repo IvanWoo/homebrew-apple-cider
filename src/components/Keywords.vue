@@ -16,11 +16,6 @@
 <script>
 export default {
   name: 'Keywords',
-  data () {
-      return {
-        source: ''
-      }
-  },
   methods: {
       keywordChanged: function (e) {
           this.$emit('keywordChanged', e.target.value);
