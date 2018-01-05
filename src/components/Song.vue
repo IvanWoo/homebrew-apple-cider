@@ -1,13 +1,14 @@
 <template>
 
-    <!-- <audio class="audioPlayer w-100 mw-100 align-middle" controls="" controlsList="nodownload" preload="none" :src="song_url" type="audio/mpeg">
+    <audio class="audioPlayer w-100 mw-100 align-middle" controls="" controlsList="nodownload" preload="none" :src="song_url" type="audio/mpeg">
         Your browser does not support the audio element.
-    </audio> -->
-    <div v-if="show">
+    </audio>
+    
+    <!-- <div v-if="show"> -->
         <!-- <a-player mutex narrow :music="music" v-on:click="addToPlaylist(music)"></a-player> -->
-        <span v-on:click="reloadPlaylist(music)">▶️</span>
+        <!-- <span v-on:click="reloadPlaylist(music)">▶️</span> -->
         <!-- <span v-on:click="reload">⟳</span> -->
-    </div>
+    <!-- </div> -->
 
 
 </template>
@@ -31,7 +32,7 @@ export default {
     },
     methods: {
         getSongUrl: function(song_id) {
-            axios.get('https://doubananimalclock.leanapp.cn/api/get/song/xiami?id=' + song_id)
+            axios.get('https://douting.leanapp.cn/api/get/song/qq?id=' + song_id)
                 .then(response => {
                     this.song_url = response.data.url;
                     this.music.title = response.data.name;

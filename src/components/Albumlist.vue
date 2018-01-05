@@ -4,7 +4,7 @@
             <ul class="media-list row">
                 <li class="media row col-sm-12 col-lg-6" v-for="(album, index) in albums" :key="album.id">
                     <div class="col-sm-12 col-md-4">
-                        <img class="media-left media-object mw-100" v-bind:src="album.cover">
+                        <img class="media-left media-object mw-100" v-bind:src="album.coverBig">
                     </div>
                     <div class="media-body col-md-12">
                         <h2 class="h3">{{ album.name }}</h2>
@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         getAlbumList: function (source) {
-            axios.get('https://doubananimalclock.leanapp.cn/api/search/album/xiami?key=' + source)
+            axios.get('https://douting.leanapp.cn/api/search/album/qq?&limit=3&key=' + source)
                 .then(response => {
                     this.albums = response.data.albumList;
 

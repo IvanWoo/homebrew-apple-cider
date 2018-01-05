@@ -38,7 +38,7 @@ export default {
     },
     methods: {
         getSongList: function(album_id) {
-            axios.get('https://doubananimalclock.leanapp.cn/api/get/album/xiami?id=' + album_id)
+            axios.get('https://douting.leanapp.cn/api/get/album/qq?id=' + album_id)
                 .then(response => {
                     this.songs = response.data.songList;
                 });
