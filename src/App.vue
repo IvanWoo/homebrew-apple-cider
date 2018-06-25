@@ -2,9 +2,9 @@
   <div id="app">
     <Keywords v-on:keywordChanged="keywordChanged"></Keywords>
     <Albumlist v-bind:source="source"></Albumlist>
-    <div v-if="load">
+    <!-- <div v-if="load">
         <a-player listmaxheight="120px" mutex :music="playlist" class="fixed-bottom"></a-player>
-    </div>
+    </div> -->
     <!-- <button v-on:click="clearPlaylist" type="button" class="btn btn-danger fixed-top">Clear Playlist</button> -->
   </div>
 </template>
