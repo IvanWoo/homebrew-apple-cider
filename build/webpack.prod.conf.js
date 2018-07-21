@@ -8,6 +8,12 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
+// new webpack.optimize.UglifyJsPlugin({ // Can switch back to this with webpack 4
+new UglifyJsPlugin({
+  sourceMap: true
+})
 
 var env = config.build.env
 
