@@ -1,6 +1,6 @@
 # homebrew-apple-cider
 
-> A  music app
+> A music app
 
 ## Documentation
 To check out live demo, please visit https://ivanwoo.github.io/apple-cider.

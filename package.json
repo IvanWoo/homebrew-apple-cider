@@ -1,7 +1,7 @@
 {
   "name": "homebrew-apple-cider",
   "version": "1.0.0",
-  "description": "A  music app",
+  "description": "A music app",
   "author": "Yifan Wu <tyivanwu@gmail.com>",
   "private": true,
   "scripts": {
