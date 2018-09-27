@@ -23,7 +23,7 @@ import VueAplayer from 'vue-aplayer'
 
 export default {
     name: 'Song',
-    props: ['song_id'],
+    props: ['song_info'],
     components: {
         'a-player': VueAplayer
     },
@@ -36,8 +36,8 @@ export default {
         }
     },
     methods: {
-        getSongUrl: function(song_id) {
-            axios.get('https://douting.leanapp.cn/api/get/song/qq?id=' + song_id)
+        getSongUrl: function(song_info) {
+            axios.get('https://douting.leanapp.cn/api/get/song/qq?id=' + song_info.id + '&mid=' + song_info.mid)
                 .then(response => {
                     this.song_url = response.data.url;
                     // this.music.title = response.data.name;
@@ -58,7 +58,7 @@ export default {
         // }
     },
     created: function() {
-        this.getSongUrl(this.song_id);
+        this.getSongUrl(this.song_info);
     },
     watch: {
         album_id: function(val) {

@@ -35,4 +35,4 @@ npm run build --report
 
 ## Acknowledgments
 
-> What Need Have I For This- What Need Have I For That- I Am Dancing At The Feet Of My Lord-All Is Bliss-All Is Bliss.
+> what need have i for this, what need have i for that. i am dancing at the feet of my lord, all is bliss, all is bliss.

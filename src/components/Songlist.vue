@@ -13,7 +13,7 @@
                     <td class="align-middle text-muted">{{ index + 1 }}</td>
                     <td class="col-sm-12 col-lg-8 align-middle">{{ song.name }}</td>
                     <td class="align-middle">
-                        <song v-bind:song_id="song.id"></song>
+                        <song v-bind:song_info="{id: song.id, mid: song.mid}"></song>
                     </td>
                 </tr>
             </tbody>
