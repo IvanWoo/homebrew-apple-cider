@@ -59,11 +59,6 @@ export default {
     },
     created: function() {
         this.getSongUrl(this.song_info);
-    },
-    watch: {
-        album_id: function(val) {
-            this.getSongUrl(val);
-        }
     }
 }
 </script>
