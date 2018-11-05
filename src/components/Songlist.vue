@@ -23,6 +23,7 @@
 
 <script>
 import axios from 'axios'
+import _ from 'lodash'
 import Song from '@/components/Song'
 
 export default {
@@ -36,20 +37,29 @@ export default {
             songs: [],
         }
     },
+    watch: {
+        // whenever question changes, this function will run
+        album_id: function (newalbum_id, oldalbum_id) {
+            this.debouncedGetSongList(newalbum_id)
+        }
+    },
+    created: function () {
+        // _.debounce is a function provided by lodash to limit how
+        // often a particularly expensive operation can be run.
+        // In this case, we want to limit how often we access
+        // yesno.wtf/api, waiting until the user has completely
+        // finished typing before making the ajax request. To learn
+        // more about the _.debounce function (and its cousin
+        // _.throttle), visit: https://lodash.com/docs#debounce
+        this.getSongList(this.album_id);
+        this.debouncedGetSongList = _.debounce(this.getSongList, 100);
+    },
     methods: {
         getSongList: function(album_id) {
             axios.get('https://douting.leanapp.cn/api/get/album/qq?id=' + album_id)
                 .then(response => {
                     this.songs = response.data.songList;
                 });
-        }
-    },
-    created: function() {
-        this.getSongList(this.album_id);
-    },
-    watch: {
-        album_id: function(val) {
-            this.getSongList(val);
         }
     }
 }
