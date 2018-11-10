@@ -1,11 +1,18 @@
 <template>
-    <div v-if="is_success">
-        <audio class="audioPlayer align-middle" controls="" controlsList="nodownload" preload="none" :src="song_url" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <div v-if="need_pay">
+        <div>
+            cannot streaming due to paywall.
+        </div>
     </div>
-    <div v-else>
-        N/A
+    <div v-else>    
+        <div v-if="is_success">
+            <audio class="audioPlayer align-middle" controls="" controlsList="nodownload" preload="none" :src="song_url" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div v-else>
+            N/A
+        </div>
     </div>
 
     <!-- <div v-if="show">
@@ -13,8 +20,6 @@
         <span v-on:click="reloadPlaylist(music)">▶️</span>
         <span v-on:click="reload">⟳</span>
     </div> -->
-
-
 </template>
 
 <script>
@@ -32,6 +37,7 @@ export default {
             song_url: "",
             show: false,
             is_success: false,
+            need_pay: false,
             music: {}
         }
     },
@@ -43,13 +49,12 @@ export default {
                     // this.music.pic = this.song_info.album.coverBig;
                     // this.music.src = response.data.url;
                     // this.music.artist = this.song_info.artists[0].name;
+                    this.need_pay = this.song_info.needPay;
+
                     this.song_url = response.data.url;
-                    // this.music.title = response.data.name;
-                    // this.music.pic = response.data.album.cover;
-                    // this.music.url = response.data.url;
-                    // this.music.author = response.data.artist.id;
-                    // this.show = true;
                     this.is_success = response.data.success;
+
+                    this.show = true;
                 });
         },
         reloadPlaylist: function(newSong) {
