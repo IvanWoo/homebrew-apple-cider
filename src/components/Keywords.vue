@@ -15,12 +15,12 @@
 
 <script>
 export default {
-  name: 'Keywords',
-  methods: {
-      keywordChanged: function (e) {
-          this.$emit('keywordChanged', e.target.value);
-      }
-  },
+    name: 'Keywords',
+    methods: {
+        keywordChanged: function (e) {
+            this.$emit('keywordChanged', e.target.value);
+        }
+    },
 }
 </script>
 
