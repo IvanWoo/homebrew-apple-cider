@@ -9,7 +9,7 @@
     </div>
 
     <!-- <div v-if="show">
-        <a-player mutex narrow :music="music" v-on:click="addToPlaylist(music)"></a-player>
+        <a-player mutex mini :music="music" v-on:click="addToPlaylist(music)"></a-player>
         <span v-on:click="reloadPlaylist(music)">▶️</span>
         <span v-on:click="reload">⟳</span>
     </div> -->
@@ -39,6 +39,10 @@ export default {
         getSongUrl: function(song_info) {
             axios.get('https://douting.leanapp.cn/api/get/song/qq?id=' + song_info.id + '&mid=' + song_info.mid)
                 .then(response => {
+                    // this.music.title = this.song_info.name;
+                    // this.music.pic = this.song_info.album.coverBig;
+                    // this.music.src = response.data.url;
+                    // this.music.artist = this.song_info.artists[0].name;
                     this.song_url = response.data.url;
                     // this.music.title = response.data.name;
                     // this.music.pic = response.data.album.cover;
