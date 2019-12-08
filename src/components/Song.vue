@@ -1,18 +1,11 @@
 <template>
-    <div v-if="need_pay">
-        <div>
-            cannot streaming due to paywall.
-        </div>
+    <div v-if="is_success">
+        <audio class="audioPlayer align-middle" controls="" controlsList="nodownload" preload="none" :src="song_url" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
-    <div v-else>    
-        <div v-if="is_success">
-            <audio class="audioPlayer align-middle" controls="" controlsList="nodownload" preload="none" :src="song_url" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div v-else>
-            N/A
-        </div>
+    <div v-else>
+        N/A
     </div>
 
     <!-- <div v-if="show">
@@ -43,7 +36,7 @@ export default {
     },
     methods: {
         getSongUrl: function(song_info) {
-            axios.get('https://douting.leanapp.cn/api/get/song/qq?id=' + song_info.id + '&mid=' + song_info.mid)
+            axios.get('https://douting-us1.avosapps.us/api/get/song/netease?id=' + song_info.id + '&mid=' + song_info.mid)
                 .then(response => {
                     // this.music.title = this.song_info.name;
                     // this.music.pic = this.song_info.album.coverBig;
