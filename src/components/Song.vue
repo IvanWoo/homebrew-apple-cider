@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         getSongUrl: function(song_info) {
-            axios.get('https://douting-us1.avosapps.us/api/get/song/netease?id=' + song_info.id + '&mid=' + song_info.mid)
+            axios.get('https://douting.leanapp.cn/api/get/song/netease?id=' + song_info.id + '&mid=' + song_info.mid)
                 .then(response => {
                     // this.music.title = this.song_info.name;
                     // this.music.pic = this.song_info.album.coverBig;

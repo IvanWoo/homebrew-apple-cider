@@ -56,7 +56,7 @@ export default {
     },
     methods: {
         getSongList: function(album_id) {
-            axios.get('https://douting-us1.avosapps.us/api/get/album/netease?id=' + album_id)
+            axios.get('https://douting.leanapp.cn/api/get/album/netease?id=' + album_id)
                 .then(response => {
                     this.songs = response.data.songList;
                 });

@@ -53,7 +53,7 @@ export default {
     },
     methods: {
         getAlbumList: function (source) {
-            axios.get('https://douting-us1.avosapps.us/api/search/album/netease?&limit=3&key=' + source)
+            axios.get('https://douting.leanapp.cn/api/search/album/netease?&limit=3&key=' + source)
                 .then(response => {
                     this.albums = response.data.albumList;
 
