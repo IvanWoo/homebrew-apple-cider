@@ -1,0 +1,42 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 🔧
+        run: |
+          npm Install
+          npm run build
+
+      - name: Checkout Host Repo
+        uses: actions/checkout@v2
+        with:
+          repository: IvanWoo/IvanWoo.github.io
+          token: ${{ secrets.GH_PAT }}
+          path: host-repo
+
+      - name: Copy Out to Host Repo
+        run: |
+          rm -rf host-repo/apple-cider
+          mkdir host-repo/apple-cider
+          cp -a dist/. host-repo/apple-cider
+
+      - name: Commit Changes and Push
+        run: |
+          cd host-repo
+          git add .
+          git config --local user.email "tyivanwu@gmail.com"
+          git config --local user.name "Yifan Wu"
+          git commit -m "🍺 update homebrew-apple-cider, cheers!" -a
+          git push
