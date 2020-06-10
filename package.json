@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "ajv": "^6.12.2",
-    "axios": "^0.18.1",
+    "axios": "^0.19.2",
     "hls.js": "^0.10.1",
     "lodash": "^4.17.15",
     "vue": "^2.6.11",
@@ -41,7 +41,7 @@
     "opn": "^5.5.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.4.0",
-    "prettier": "^1.12.1",
+    "prettier": "^1.19.1",
     "rimraf": "^2.7.1",
     "semver": "^5.7.1",
     "shelljs": "^0.7.6",
