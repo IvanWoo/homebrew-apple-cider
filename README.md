@@ -3,7 +3,7 @@
 > A music app
 
 ## Documentation
-To check out live demo, please visit https://ivanwoo.github.io/apple-cider.
+To check out live demo at [here](http://yifanwu.studio/apple-cider).
 
 ### Screenshots
 #### Desktop
@@ -12,20 +12,23 @@ To check out live demo, please visit https://ivanwoo.github.io/apple-cider.
 #### Mobile Device
 <img src="https://github.com/IvanWoo/homebrew-apple-cider/blob/master/screenshots/mobile%20device.png" width="400">
 
+## Development
+
+```sh
+npm install
+npm run dev
+```
+
 ## Build Setup
 
-``` bash
-npm install
-
-npm run dev
-
+```sh
 npm run build
 ```
 
 ## Todo
-1. ~~music player.~~
-2. ~~playlist.~~
-3. more music streaming api.
+- add music player
+- add playlist
+- more music streaming api
 
 ## Acknowledgments
 
