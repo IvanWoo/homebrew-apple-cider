@@ -20,7 +20,7 @@
 <script>
 import axios from 'axios'
 import _ from 'lodash'
-import songlist from '@/components/Songlist'
+import songlist from './Songlist.vue'
 
 export default {
     name: 'Albumlist',

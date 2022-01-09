@@ -24,7 +24,7 @@
 <script>
 import axios from 'axios'
 import _ from 'lodash'
-import Song from '@/components/Song'
+import Song from './Song.vue'
 
 export default {
     name: 'Songlist',

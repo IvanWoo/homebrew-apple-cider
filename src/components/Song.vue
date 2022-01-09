@@ -7,24 +7,14 @@
     <div v-else>
         N/A
     </div>
-
-    <!-- <div v-if="show">
-        <a-player mutex mini :music="music" v-on:click="addToPlaylist(music)"></a-player>
-        <span v-on:click="reloadPlaylist(music)">▶️</span>
-        <span v-on:click="reload">⟳</span>
-    </div> -->
 </template>
 
 <script>
 import axios from 'axios'
-import VueAplayer from 'vue-aplayer'
 
 export default {
     name: 'Song',
     props: ['song_info'],
-    components: {
-        'a-player': VueAplayer
-    },
     data() {
         return {
             song_url: "",
@@ -50,14 +40,6 @@ export default {
                     this.show = true;
                 });
         },
-        reloadPlaylist: function(newSong) {
-            // this.$store.commit('reload');
-            // this.$store.commit('addToPlaylist', newSong);
-            this.$store.dispatch('reloadPlaylist', newSong);
-        },
-        // reload: function() {
-        //     this.$store.commit('reload');
-        // }
     },
     created: function() {
         this.getSongUrl(this.song_info);
