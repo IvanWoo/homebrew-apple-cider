@@ -6,20 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "prettier --check --write 'src/**/*.{js,vue}'"
   },
   "dependencies": {
     "ajv": "^6.12.6",
     "axios": "^0.24.0",
     "hls.js": "^0.10.1",
     "lodash": "^4.17.21",
+    "prettier": "^2.5.1",
     "vue": "^3.1.0-0",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.1.0-0",
+    "autoprefixer": "^10.4.2",
     "stylus": "^0.54.8",
     "vite": "^2.2.3"
   }
