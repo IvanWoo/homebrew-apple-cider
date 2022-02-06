@@ -6,26 +6,26 @@
 </template>
 
 <script>
-import Keywords from './components/Keywords.vue'
-import Albumlist from './components/Albumlist.vue'
+import Keywords from './components/Keywords.vue';
+import Albumlist from './components/Albumlist.vue';
 
 export default {
   name: 'app',
   components: {
     Keywords,
-    Albumlist,
+    Albumlist
   },
-  data () {
+  data() {
     return {
-      source: ""
-    }
+      source: ''
+    };
   },
   methods: {
     keywordChanged: function (source) {
       this.source = source;
-    },
+    }
   }
-}
+};
 </script>
 
 <style scoped>
