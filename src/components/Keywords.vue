@@ -16,11 +16,24 @@
 <script>
 export default {
     name: 'Keywords',
+    data () {
+        return {
+            keywords: ["zombie-chang", "jp the wavy", "Kaneko Ayano", "Yurufuwa Gang"],
+        }
+    },
     methods: {
         keywordChanged: function (e) {
             this.$emit('keywordChanged', e.target.value);
+        },
+        randomKeyword: function () {
+            return this.keywords[Math.floor(Math.random() * this.keywords.length)];
         }
     },
+    mounted: function () {
+        const initialKeyword = this.randomKeyword();
+        this.$el.querySelector('#artist').value = initialKeyword;
+        this.$emit('keywordChanged', initialKeyword);
+    }
 }
 </script>
 
